@@ -2,7 +2,10 @@
 
 namespace ActionConditionalChecker.Contracts.AccessCondition
 {
-    /// <inheritdoc/>
+    /// <summary>
+    ///     Defines basic access conditions and the synchronous predicate applied to them.
+    /// </summary>
+    /// <typeparam name="TRequest">The type of the Request object.</typeparam>
     public class AccessCondition<TRequest> : BaseAccessCondition<TRequest>
     {
         protected AccessCondition(TRequest request, 
@@ -40,7 +43,9 @@ namespace ActionConditionalChecker.Contracts.AccessCondition
             Predicate = predicate;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        ///     Required. The synchronous predicate on the Request object.
+        /// </summary>
         public Func<TRequest, bool> Predicate { get; }
     }
 }

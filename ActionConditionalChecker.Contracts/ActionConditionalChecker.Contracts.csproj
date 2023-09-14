@@ -2,7 +2,42 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.0</TargetFramework>
+    <PackageId>ActionConditionalChecker.Contracts</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Ganușceac Vlad</Authors>
+    <Product>ActionConditionalChecker.Contracts</Product>
+    <Title>ActionConditionalChecker.Contracts</Title>
+    <Description>
+      Defines the contracts for both synchronous and asynchronous condition checkers in order to find out if the action may be executed under specific circumstances.
+      This will help to eliminate idmpotent duplicated requests (the rule also may be aplied for non idempotent ones) and can help to eliminate concurrent issues 
+      on accessing a specified resource (in a conditional way).
+    </Description>
+    <RepositoryUrl>https://github.com/VladGanuscheak/ActionConditionalChecker.Contracts</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>actionconditionalchecker;concurrent;utility;contracts;.net;dotnet;c#</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="C:\Users\User\Desktop\Logos\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ActionConditionalCheckerContracts.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="OperationResult.Net" Version="1.0.1" />

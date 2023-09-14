@@ -3,10 +3,20 @@ using System;
 
 namespace ActionConditionalChecker.Contracts.ActionInfo
 {
+    /// <summary>
+    ///     Contains information about the current action
+    /// </summary>
+    /// <typeparam name="TRequest">Request type</typeparam>
     public abstract class ActionInfo<TRequest> : BaseActionInfo<TRequest>
     {
+        /// <summary>
+        ///     The Action
+        /// </summary>
         public Action<TRequest> Action { get; }
 
+        /// <summary>
+        ///     The Predicate
+        /// </summary>
         public AccessCondition<TRequest> AccessCondition { get; }
 
         protected ActionInfo(
@@ -20,10 +30,20 @@ namespace ActionConditionalChecker.Contracts.ActionInfo
         }
     }
 
+    /// <summary>
+    ///     Contains information about the current action
+    /// </summary>
+    /// <typeparam name="TRequest">Request type</typeparam>
     public abstract class ActionInfo<TRequest, TResponse> : BaseActionInfo<TRequest>
     {
+        /// <summary>
+        ///     The Action
+        /// </summary>
         public Func<TRequest, TResponse> Action { get; }
 
+        /// <summary>
+        ///     The Predicate
+        /// </summary>
         public AccessCondition<TRequest> AccessCondition { get; }
 
         protected ActionInfo(

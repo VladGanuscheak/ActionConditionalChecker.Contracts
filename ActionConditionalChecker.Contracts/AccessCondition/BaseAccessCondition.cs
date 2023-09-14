@@ -2,16 +2,26 @@
 
 namespace ActionConditionalChecker.Contracts.AccessCondition
 {
-    /// <inheritdoc/>
+    /// <summary>
+    ///     Declares the base properties for access condition checking.
+    /// </summary>
+    /// <typeparam name="TRequest">The type of the Request object.</typeparam>
     public abstract class BaseAccessCondition<TRequest>
     {
-        /// <inheritdoc/>
+        /// <summary>
+        ///     Required. The request which has to be executed
+        /// </summary>
         public TRequest Request { get; }
 
-        /// <inheritdoc/>
+        /// <summary>
+        ///     Optional. Date time in the UTC format when the lock expires for the same actions on the similar requests
+        ///     (the type of request, its predicate and the content of the Request's object all combined form the criteria).
+        /// </summary>
         public DateTime? ExpiresAtUtc { get; }
 
-        /// <inheritdoc/>
+        /// <summary>
+        ///     Indicates that the lock on the similar requests will not be erased till the current request is not finished.
+        /// </summary>
         public bool WaitTillActionCompletion { get; }
 
         protected BaseAccessCondition(TRequest request, 
