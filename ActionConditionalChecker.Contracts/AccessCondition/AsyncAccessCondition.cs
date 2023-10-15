@@ -3,7 +3,10 @@ using System.Threading.Tasks;
 
 namespace ActionConditionalChecker.Contracts.AccessCondition
 {
-    /// <inheritdoc/>
+    /// <summary>
+    ///     Defines basic access conditions and the asynchronous predicate applied to them.
+    /// </summary>
+    /// <typeparam name="TRequest">The type of the Request object.</typeparam>
     public class AsyncAccessCondition<TRequest> : BaseAccessCondition<TRequest>
     {
         protected AsyncAccessCondition(
@@ -42,7 +45,9 @@ namespace ActionConditionalChecker.Contracts.AccessCondition
             Predicate = predicate;
         }
 
-        /// <inheritdoc/>
+        /// <summary>
+        ///     Required. The asynchronous predicate on the Request object.
+        /// </summary>
         public Func<TRequest, Task<bool>> Predicate { get; }
     }
 }
