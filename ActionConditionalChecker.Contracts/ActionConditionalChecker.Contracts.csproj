@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <PackageId>ActionConditionalChecker.Contracts</PackageId>
-    <Version>3.1.0</Version>
+    <Version>5.0.0</Version>
     <Authors>Ganușceac Vlad</Authors>
     <Product>ActionConditionalChecker.Contracts</Product>
     <Title>ActionConditionalChecker.Contracts</Title>
@@ -20,7 +20,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
     <PackageIconUrl />
-    <PackageReleaseNotes>Migrated to .Net Core 3.1</PackageReleaseNotes>
+    <PackageReleaseNotes>Migrated to .Net 5.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -41,7 +41,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="OperationResult.Net" Version="3.1.0" />
+    <PackageReference Include="OperationResult.Net" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
