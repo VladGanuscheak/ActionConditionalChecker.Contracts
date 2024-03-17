@@ -20,7 +20,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>logo.png</PackageIcon>
     <PackageIconUrl />
-    <PackageReleaseNotes>Updated referencies</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated references</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
