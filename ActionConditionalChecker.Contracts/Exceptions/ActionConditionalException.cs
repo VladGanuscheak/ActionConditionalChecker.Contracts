@@ -3,14 +3,9 @@ using System;
 
 namespace ActionConditionalChecker.Contracts.Exceptions
 {
-    public class ActionConditionalException<TRequest> : Exception
+    public class ActionConditionalException<TRequest>(BaseAccessCondition<TRequest> accessCondition) : Exception
     {
-        private readonly BaseAccessCondition<TRequest> _accessCondition;
-
-        public ActionConditionalException(BaseAccessCondition<TRequest> accessCondition)
-        {
-            _accessCondition = accessCondition;
-        }
+        private readonly BaseAccessCondition<TRequest> _accessCondition = accessCondition;
 
         public override string Message => ConstructExceptionMessage(_accessCondition);
 
